@@ -6,14 +6,18 @@ const People = require("./People.js");
 let people = new People();
 
 App.get("/people/name/:name", (req, res) => {
-    people.forEach((value)=> {
+    
         res.send(people.readName(req));
-        
-    });
 
 });
 
-App.get("/people/color/:color", (req, res) => {
+App.get("/people/person/color/:color", (req, res) => {
+
+    res.send(people.readAllColor(req));
+
+});
+
+App.get("/people/person/color/:color", (req, res) => {
 
     res.send(people.readColor(req));
 
