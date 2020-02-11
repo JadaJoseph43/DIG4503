@@ -17,5 +17,4 @@ App.get("/api/:number", (req, res) => {
 
 App.listen(port, ()=> {
     console.log("server running!");
-
 });
