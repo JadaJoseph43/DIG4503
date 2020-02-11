@@ -1,26 +1,29 @@
-const Express = require("express");
+const Express = require("express")
 const App = Express();
 const port = 80;
 
-const People = require("./People.js");
-let people = new People();
+const chalk = require('chalk');
+const pokemons = require('json-pokemon');
 
-App.get("/people/name/:name", (req, res) => {
-    
-        res.send(people.readName(req));
+let pokeId = pokemons.getPokemonById();
+let pokeName = pokemons.getPokemonByName();
 
+App.get("/id/:id", (req, res) => {
+    if (pokeId == req.params.id) {
+        res.send(req.params.id);
+        console.log(chalk.green(__filename));
+    };
+    res.send("Error ID does not exist!");
+    console.log(chalk.red(__filename));
 });
 
-App.get("/people/person/color/:color", (req, res) => {
-
-    res.send(people.readAllColor(req));
-
-});
-
-App.get("/people/person/color/:color", (req, res) => {
-
-    res.send(people.readColor(req));
-
+App.get("/name/:name", (req, res) => {
+    if (pokeName == req.params.name) {
+        res.send(req.params.name);
+        console.log(chalk.green(__filename));
+    };
+    res.send("Error Name does not exist!");
+    console.log(chalk.red(__filename));
 });
 
 App.listen(port, () => {
