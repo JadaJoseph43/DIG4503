@@ -1,7 +1,7 @@
 <html>
     <body>
         <script>
-            function FindId(event) {
+            function IdSearch(event) {
 
                 event.preventDefault();
 
@@ -23,7 +23,7 @@
                 });
             }
 
-            function FindName(event) {
+            function NameSearch(event) {
 
                 event.preventDefault();
 
@@ -44,11 +44,11 @@
                 });
             }
         </script>
-        <form onsubmit="FindId(event)">
+        <form onsubmit="IdSearch(event)">
             <input id="pokemonId" type="text">
             <button>Submit</button>
         </form>
-        <form onsubmit="FindName(event)">
+        <form onsubmit="NameSearch(event)">
                 <input id="pokemonName" type="text">
                 <button>Submit</button>
         </form>
