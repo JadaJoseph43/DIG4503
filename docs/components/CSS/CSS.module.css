@@ -1,0 +1,39 @@
+.body {
+    color: #c0b0c2;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.head {
+    color: #c0b0c2;
+    font-size: 23px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.a {
+    color: #8a2b8c;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+.a:hover {
+    color: #c244a1;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+.a:visited {
+    color: #8a2b8c;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+
+}
